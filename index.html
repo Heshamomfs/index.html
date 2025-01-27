@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smile Up Dental Center</title>
+  <style>
+    /* ====== Basic Reset ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ====== Header ====== */
+    header {
+      background: #00BFFF;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+
+    /* ====== Language Toggle ====== */
+    .language-toggle {
+      margin-top: 1rem;
+    }
+    .language-toggle button {
+      background: #fff;
+      border: 2px solid #00BFFF;
+      color: #00BFFF;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .language-toggle button:hover {
+      background: #00BFFF;
+      color: #fff;
+    }
+
+    /* ====== Main Content ====== */
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      flex: 1 1 300px;
+      padding: 1rem;
+    }
+    .service-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      background: #00BFFF;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+      }
+    }
+
+    /* ====== Hide/Show Classes ====== */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Smile Up Dental Center</h1>
+    <!-- Language Toggle Buttons -->
+    <div class="language-toggle">
+      <button onclick="showEnglish()">English</button>
+      <button onclick="showArabic()">العربية</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ====================== ENGLISH CONTENT ====================== -->
+    <div id="english-content">
+      <section id="hero-en">
+        <h2>Creating Perfect Smiles</h2>
+        <p>
+          Welcome to Smile Up Dental Center, your destination for top-quality dental care.
+          We specialize in cosmetic dentistry, dental implants, and more.
+        </p>
+      </section>
+
+      <section id="services-en">
+        <h2>Our Services</h2>
+        <div class="services">
+          <div class="service-card">
+            <h3>Cosmetic Dentistry</h3>
+            <p>Get the smile of your dreams with our advanced cosmetic treatments.</p>
+          </div>
+          <div class="service-card">
+            <h3>Dental Implants</h3>
+            <p>Restore function and appearance with state-of-the-art implant technology.</p>
+          </div>
+          <div class="service-card">
+            <h3>Routine Check-ups</h3>
+            <p>Regular cleanings and exams to ensure oral health for the whole family.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-en">
+        <h2>About Us</h2>
+        <p>
+          Smile Up Dental Center is a leading dental clinic located in Ibb, Yemen.
+          Our dedicated team of skilled doctors and professionals offers comprehensive
+          dental care, focusing on both health and aesthetics. We believe in the
+          power of a confident smile.
+        </p>
+      </section>
+
+      <section id="contact-en">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> <a href="tel:+967778885789">+967 778 885 789</a></p>
+        <p><strong>Email:</strong> <a href="mailto:[email protected]">[email protected]</a></p>
+        <p><strong>Address:</strong> Al-'Amdi Street, next to the Public Oil Company,
+          Second Floor, Arabian Center, Ibb, Yemen</p>
+        <p><strong>Working Hours:</strong> Always open</p>
+      </section>
+    </div>
+
+    <!-- ====================== ARABIC CONTENT ====================== -->
+    <div id="arabic-content" class="hidden" dir="rtl">
+      <section id="hero-ar">
+        <h2>نصنع الابتسامات المثالية</h2>
+        <p>
+          مرحباً بكم في مركز سمايل أب لطب الفم والأسنان، وجهتكم الأولى للعناية
+          بالأسنان. نقدم لكم خدمات متقدمة في تجميل الأسنان، وزراعة الأسنان، وغيرها الكثير.
+        </p>
+      </section>
+
+      <section id="services-ar">
+        <h2>خدماتنا</h2>
+        <div class="services">
+          <div class="service-card">
+            <h3>تجميل الأسنان</h3>
+            <p>احصل على ابتسامة أحلامك مع أحدث تقنيات تجميل الأسنان.</p>
+          </div>
+          <div class="service-card">
+            <h3>زراعة الأسنان</h3>
+            <p>استعد وظيفة ومظهر أسنانك مع تقنيات الزراعة المتطورة.</p>
+          </div>
+          <div class="service-card">
+            <h3>الفحوصات الدورية</h3>
+            <p>تنظيف دوري وفحوصات شاملة لضمان صحة الفم لجميع أفراد العائلة.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-ar">
+        <h2>من نحن</h2>
+        <p>
+          مركز سمايل أب لطب الفم والأسنان هو عيادة متخصصة رائدة تقع في مدينة إب، اليمن.
+          يضم المركز فريقاً من الأطباء المحترفين والمتخصصين، ويقدمون رعاية شاملة للأسنان
+          مع تركيز على الجوانب الصحية والجمالية. نحن نؤمن بأهمية الابتسامة الواثقة.
+        </p>
+      </section>
+
+      <section id="contact-ar">
+        <h2>تواصل معنا</h2>
+        <p><strong>الهاتف:</strong> <a href="tel:+967778885789">+967 778 885 789</a></p>
+        <p><strong>البريد الإلكتروني:</strong> <a href="mailto:[email protected]">[email protected]</a></p>
+        <p>
+          <strong>العنوان:</strong>
+          شارع العمدي بجوار شركة النفط العامة، الطابق الثاني في مبنى المركز العربي، إب، اليمن
+        </p>
+        <p><strong>ساعات العمل:</strong> مفتوح دائماً</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Smile Up Dental Center. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ====== JavaScript for Language Toggle ====== -->
+  <script>
+    const englishContent = document.getElementById("english-content");
+    const arabicContent = document.getElementById("arabic-content");
+
+    function showEnglish() {
+      englishContent.classList.remove("hidden");
+      arabicContent.classList.add("hidden");
+    }
+
+    function showArabic() {
+      englishContent.classList.add("hidden");
+      arabicContent.classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
